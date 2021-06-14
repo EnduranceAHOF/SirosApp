@@ -1,5 +1,5 @@
 module.exports = (sequelize, type) => {
-    return sequelize.define('user', {
+    return sequelize.define('formulario', {
         id: {
             type: type.UUID,
             defaultValue: type.UUIDV4,

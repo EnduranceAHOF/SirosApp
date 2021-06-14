@@ -1,18 +1,17 @@
 module.exports = (sequelize, DataTypes) => {
-	const Paciente = sequelize.define(
+    const Paciente = sequelize.define(
         //Nombre de la tabla
-		'paciente',
-		{
-			//Atributos del modelo Paciente
-			id: {
-				type: DataTypes.STRING(50),
-				allowNull: false,
-				primaryKey: true,
-			},
-			nombre: {
-				type: DataTypes.STRING(100),
-				allowNull: false,
-			},
+        'paciente', {
+            //Atributos del modelo Paciente
+            id: {
+                type: DataTypes.STRING(50),
+                allowNull: false,
+                primaryKey: true,
+            },
+            nombre: {
+                type: DataTypes.STRING(100),
+                allowNull: false,
+            },
             apellido: {
                 type: DataTypes.STRING(100),
                 allowNull: false,
@@ -29,10 +28,8 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING(15),
                 allowNull: false,
             },
-            //Determinar como hacer esta parte
-            tablaFormulario: {}
-		}
-	);
+        }
+    );
 
-	return Paciente;
+    return Paciente;
 };
