@@ -1,17 +1,14 @@
 module.exports = (sequelize, DataTypes) => {
-    const Medico = sequelize.define(
+    const Paciente = sequelize.define(
         //Nombre de la tabla
-        'medico', {
-            //Atributos del modelo Medico
+        'paciente', {
+            //Atributos del modelo Paciente
             id: {
                 type: DataTypes.INTEGER,
                 allowNull: false,
                 primaryKey: true,
-            },
-            id_consulta: {
-                type: DataTypes.INTEGER,
-                references: 'consulta',
-                referencesKey: 'id'
+                unique: true,
+                autoIncrement: true
             },
             nombre: {
                 type: DataTypes.STRING(100),
@@ -24,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
             rut: {
                 type: DataTypes.STRING(15),
                 allowNull: false,
+                unique: true,
             },
             direccion: {
                 type: DataTypes.STRING(100),
@@ -33,13 +31,8 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING(15),
                 allowNull: false,
             },
-
-            especialidad: {
-                type: DataTypes.STRING(50),
-                allowNull: false,
-            },
         }
     );
 
-    return Medico;
+    return Paciente;
 };
