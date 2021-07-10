@@ -27,11 +27,11 @@ Consulta.belongsTo(Medico, {
     foreingKey: 'id'
 });
 
-Consulta.hasMany(Paciente, {
+Paciente.hasMany(Consulta, {
     onDelete: 'cascade',
 });
 
-Paciente.belongsTo(Consulta, {
+Consulta.belongsTo(Paciente, {
     foreingKey: 'id'
 });
 

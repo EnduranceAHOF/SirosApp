@@ -16,6 +16,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/api', apiRouter);
 
+app.get('/', (req, res) => {
+    res.send('benja ctm inutil')
+})
+
 app.listen(3001, () => {
     console.log('Servidor arrancado!');
 });
